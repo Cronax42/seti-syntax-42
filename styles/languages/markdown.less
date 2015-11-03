@@ -8,7 +8,7 @@
         color: @red;
     }
     &.italic {
-        color: @blue;
+        color: @orange;
         font-style: italic;
     }
     &.bold {
@@ -38,13 +38,13 @@
     }
     &.underline {
         text-decoration: none;
-        //border-bottom: @invisible-ink;
+        border-bottom: @code-font-color;
         border-width: 0px 0px 1px 0px;
         border-style: none none solid none;
 
     }
     &.heading {
-        color: @blue;
+        color: @lightblue;
         font-weight: bold;
         // position: relative;
         &.heading-1 {
@@ -79,7 +79,7 @@
         }
         // marker of headings
         &.marker {
-            color: fade(@lightgreen, 55%);
+            color: fade(@cyan, 84%);
         }
     }
 }
