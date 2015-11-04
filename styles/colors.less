@@ -1,15 +1,17 @@
 // COLORS
+@black: rgb(21,21,21);
+@white: rgb(210,210,210);
+@lightgray: rgb(168,168,168);
+@gray: rgb(84,84,84);
+@darkgray: rgb(42,42,42);
 @red: rgb(168,42,42);
-@black: rgb(42,42,42);
-@green: rgb(84,126,42);
+@orange: rgb(210,84,0);
 @brown: rgb(168,84,84);
+@yellow: rgb(252,210,126);
+@green: rgb(84,168,42);
+@cyan: rgb(42,126,126);
 @blue: rgb(42,126,168);
 @purple: rgb(126,84,168);
-@cyan: rgb(42,126,126);
-@yellow: rgb(252,210,126);
-@white: rgb(210,210,210);
-@orange: rgb(210,84,0);
-@lightgray: rgb(168,168,168);
 @lightred: rgb(210,84,84);
 @lightgreen: rgb(168,210,126);
 @lightblue: rgb(84,168,210);
@@ -17,18 +19,18 @@
 @lightcyan: rgb(84,168,168);
 
 // GUTTER
-@gutter-text: rgb(84,84,84);
+@gutter-text: @gray;
 @gutter-text-highlight: @entity;
-@gutter-background: rgb(21,21,21);
+@gutter-background: @darkgray;
 @gutter-background-highlight: rgb(10,10,10);
 
 // CODE VIEW
-@code-background: rgb(21,23,24); // editor background
+@code-background: @black; // editor background
 @code-font: Source Code Pro;
-@code-font-color: rgb(212,215,214); // default editor text
+@code-font-color: @white; // default editor text
 
 // SYNTAX COLORS
-@comment: rgb(84,84,84); // comments, duhr.
+@comment: @gray; // comments, duhr.
 @comment-bg: none; // comments, duhr.
 @comment-punc: @comment;
 @string: @green; // 'value' of var='value', "name.png" or src="name.png"
