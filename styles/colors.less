@@ -1,33 +1,35 @@
 // COLORS
 @black: rgb(21,21,21);
-@white: rgb(210,210,210);
+@white: rgb(252,252,252);
+@verylightgray: rgb(210,210,210);
 @lightgray: rgb(168,168,168);
 @gray: rgb(84,84,84);
 @darkgray: rgb(42,42,42);
-@red: rgb(168,42,42);
-@orange: rgb(210,84,0);
-@brown: rgb(168,84,84);
-@yellow: rgb(252,210,126);
-@green: rgb(84,168,42);
-@cyan: rgb(42,126,126);
-@blue: rgb(42,126,168);
-@purple: rgb(126,84,168);
-@lightred: rgb(210,84,84);
-@lightgreen: rgb(168,210,126);
-@lightblue: rgb(84,168,210);
-@lightpurple: rgb(168,126,210);
-@lightcyan: rgb(84,168,168);
+@red: rgb(168,0,0);
+@lightred: rgb(210,42,42);
+@orange: rgb(210,84,42);
+@brown: rgb(126,42,0);
+@yellow: rgb(210,168,0);
+@green: rgb(63,126,84);
+@lightgreen: rgb(42,180,63);
+@cyan: rgb(0,142,142);
+@lightcyan: rgb(21,168,168);
+@blue: rgb(21,84,168);
+@lightblue: rgb(21,115,210);
+@purple: rgb(84,21,168);
+@lightpurple: rgb(126,42,210);
+
 
 // GUTTER
-@gutter-text: @gray;
-@gutter-text-highlight: @entity;
-@gutter-background: @darkgray;
-@gutter-background-highlight: rgb(10,10,10);
+@gutter-text: lighten(@code-font-color, 42%);
+@gutter-text-highlight: @lightpurple;
+@gutter-background: darken(@code-background, 5%);
+@gutter-background-highlight: darken(@gutter-background, 5%);
 
 // CODE VIEW
-@code-background: @black; // editor background
+@code-background: @white; // editor background
 @code-font: Source Code Pro;
-@code-font-color: @white; // default editor text
+@code-font-color: @black; // default editor text
 
 // SYNTAX COLORS
 @comment: @gray; // comments, duhr.
@@ -35,13 +37,13 @@
 @comment-punc: @comment;
 @string: @green; // 'value' of var='value', "name.png" or src="name.png"
 @constant: @red; // true of var x = true, {{}} of {{> hbs_include}}
-@variable: @blue; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
-@support: @purple; // module of module.exports, color of color: rgb(0,0,0)
+@variable: @lightblue; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@support: @lightpurple; // module of module.exports, color of color: rgb(0,0,0)
 @entity: @blue; // exports of module.exports, <div id= of <div id="#id">, . of .className
 @keyword: @lightblue; // = of var a = b, if of if a = b, px of font-size: 13px;
-@storage: @yellow; // var of var a = b;
+@storage: @lightcyan; // var of var a = b;
 @meta: @code-font-color; // none of border: none;
-@function-param: @green;
+@function-param: @orange;
 
 @error: @red;
 
@@ -54,13 +56,13 @@
 @unknown: @code-font-color;
 
 // MISC COLORS
-@invisible: rgba(255,255,255,0.1);
+@invisible: lighten(@code-font-color, 63%);
 @guides: rgba(245,250,255,0.04);
 @cursor-color: @code-font-color;
 @cursor-width: 2px;
-@selected: rgba(84,168,210,0.6); // selected background color
-@selected-border: rgba(84,168,210,0.9);
-@selected-line: rgba(0,0,0,0.2);
+@selected: darken(@code-background, 10%); // selected background color
+@selected-border: @verylightgray;
+@selected-line: darken(@code-background, 3%);
 
 // HTML
 @tag: @green;

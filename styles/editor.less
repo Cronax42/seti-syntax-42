@@ -4,6 +4,8 @@
 .atom-text-editor, :host {
   background-color: @code-background;
   color: @code-font-color;
+  font-weight: 500;
+  -webkit-font-smoothing: auto;
 }
 
 // MAIN CODE EDITOR STYLES
@@ -33,7 +35,7 @@
 
     background-color: @gutter-background;
     color: @gutter-text;
-    // border-right: 10px solid @code-background;
+    border-right: 12px solid @code-background;
 
     .line-number {
 
@@ -44,16 +46,16 @@
 
       // SELECTED BLOCK
       &.cursor-line {
-        background-color: @gutter-background-highlight;
+        background-color: @gutter-background;
         color: @gutter-text-highlight;
-        font-weight: 100;
+        font-weight: 500;
       }
 
       // CURRENT ACTIVE LINE
       &.cursor-line-no-selection {
-        background-color: @gutter-background-highlight !important;
+        background-color: darken(@code-background, 2%) !important;
         color: @gutter-text-highlight;
-        // font-weight: bold;
+        //font-weight: bold;
       }
 
     }
@@ -94,7 +96,7 @@
 
   // ADD LEFT PADDING TO CODE VIEW
   .scroll-view {
-    padding-left: 10px;
+    //padding-left: 10px;
   }
 
 
